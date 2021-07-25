@@ -1,13 +1,25 @@
 package com.epam.test.automation.java.practice5;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * <summary>
  * Implement class according to description of task.
  * </summary>
  */
+
 public class ArrayRectangles {
     //TODO: Delete line below and write your own solution;
     //TODO: implement constructors according to description of task
+    private int n;
+    List<Rectangle> rectangleArray = new ArrayList<Rectangle>();
+
+
+    public ArrayRectangles(Array[] rectangleArray, int n) {
+        this.n = n;
+    }
 
     /**
      * <summary>
@@ -15,8 +27,13 @@ public class ArrayRectangles {
      * </summary>
      */
     public boolean addRectangle(Rectangle rectangle) {
-        //TODO: Delete line below and write your own solution;
-        throw new UnsupportedOperationException();
+        if (rectangleArray.get(n) == null){
+
+            rectangleArray.add(rectangle);
+            return true;
+        }else {
+            return false;
+        }
     }
 
     /**
